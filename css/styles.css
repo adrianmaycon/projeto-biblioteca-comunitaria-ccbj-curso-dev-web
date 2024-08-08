@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão do texto como Arial, com uma fonte alternativa sans-serif se Arial não estiver disponível. */
+    line-height: 1.6; /* Define a altura da linha como 1.6 vezes o tamanho da fonte, melhorando a legibilidade do texto. */
+    margin: 0; /* Remove a margem padrão do corpo da página. */
+    padding: 0; /* Remove o preenchimento padrão do corpo da página. */
+    background-image: url('https://img.freepik.com/fotos-gratis/colecao-abundante-de-livros-antigos-em-prateleiras-de-madeira-geradas-por-ia_188544-29660.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721088000&semt=sph'); /* Define uma imagem de fundo para a página. */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área do corpo. */
+    background-position: center; /* Centraliza a imagem de fundo. */
+    background-attachment: fixed; /* Fixa a imagem de fundo na tela, para que não se mova quando a página é rolada. */
+    background-repeat: no-repeat; /* Impede a repetição da imagem de fundo. */
+}
+
+body::before {
+    content: ""; /* Cria um pseudo-elemento antes do conteúdo do corpo, mas sem conteúdo visível. */
+    position: absolute; /* Posiciona o pseudo-elemento absolutamente em relação ao corpo. */
+    top: 0; /* Alinha o pseudo-elemento ao topo do corpo. */
+    left: 0; /* Alinha o pseudo-elemento à esquerda do corpo. */
+    width: 100%; /* Define a largura do pseudo-elemento para cobrir 100% da largura do corpo. */
+    height: max-content; /* Ajusta a altura para se adaptar ao conteúdo. */
+    background: rgba(0, 0, 0, 0.5); /* Define uma cor de fundo preta com 50% de opacidade, criando um filtro escuro sobre a imagem de fundo. */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo da página, com um índice z menor. */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Define uma margem inferior de 15px para separar os grupos de formulário. */
+}
+
+label {
+    display: block; /* Faz com que o elemento label seja exibido como um bloco, ocupando toda a largura disponível. */
+    font-weight: bold; /* Define o peso da fonte como negrito. */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Define a largura dos campos de entrada e do textarea para ocupar 100% da largura do contêiner pai. */
+    padding: 8px; /* Adiciona um preenchimento de 8px dentro dos campos. */
+    border: 1px solid #ccc; /* Define uma borda de 1px com cor cinza clara ao redor dos campos. */
+    border-radius: 4px; /* Arredonda os cantos da borda com um raio de 4px. */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura do elemento. */
+}
+
+button {
+    display: block; /* Faz com que o botão seja exibido como um bloco, ocupando toda a largura disponível. */
+    width: 100%; /* Define a largura do botão para ocupar 100% da largura do contêiner pai. */
+    padding: 10px; /* Adiciona um preenchimento de 10px dentro do botão. */
+    background-color: #4CAF50; /* Define a cor de fundo do botão como verde. */
+    color: #fff; /* Define a cor do texto do botão como branco. */
+    border: none; /* Remove a borda padrão do botão. */
+    font-weight: 600; /* Define o peso da fonte como semi-negrito. */
+    border-radius: 4px; /* Arredonda os cantos do botão com um raio de 4px. */
+    cursor: pointer; /* Altera o cursor para uma mão quando o usuário passa sobre o botão. */
+    font-size: 18px; /* Define o tamanho da fonte do botão para 18px. */
+}
+
+button:hover {
+    background-color: #1f5122; /* Muda a cor de fundo do botão para um verde mais escuro quando o usuário passa o mouse sobre ele. */
+}
+
+#formMessage {
+    text-align: center; /* Centraliza o texto dentro do elemento com o ID formMessage. */
+    margin-top: 10px; /* Adiciona uma margem superior de 10px ao elemento. */
+    font-weight: bold; /* Define o peso da fonte como negrito. */
+}
+
+.header-main {
+    background-color: #fff; /* Define a cor de fundo da seção como branca. */
+    padding: 10px 20px; /* Adiciona um preenchimento interno de 10px no topo e na base e 20px nas laterais. */
+    border-radius: 16px; /* Arredonda os cantos da borda com um raio de 16px. */
+    margin-bottom: 16px; /* Adiciona uma margem inferior de 16px. */
+}
+
+.container {
+    width: 90%; /* Define a largura do contêiner como 90% da largura do elemento pai. */
+    margin: auto; /* Centraliza o contêiner horizontalmente. */
+    overflow: hidden; /* Oculta o conteúdo que transborda o contêiner. */
+}
+
+header {
+    background: #333; /* Define a cor de fundo do cabeçalho como cinza escuro. */
+    color: #fff; /* Define a cor do texto no cabeçalho como branca. */
+    padding: 20px 0; /* Adiciona um preenchimento interno de 20px no topo e na base. */
+}
+
+@keyframes typing {
+    from { width: 0; } /* Define o início da animação de digitação com largura de 0. */
+    to { width: 100%; } /* Define o fim da animação de digitação com largura de 100%. */
+}
+
+@keyframes blink {
+    0% { border-right: 2px solid transparent; } /* Define o início da animação de piscar com uma borda direita transparente. */
+    100% { border-right: 2px solid black; } /* Define o fim da animação de piscar com uma borda direita preta. */
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte do título como Courier New, com Courier e monospace como alternativas. */
+    white-space: nowrap; /* Impede a quebra de linha dentro do título. */
+    overflow: hidden; /* Oculta o texto que transborda o elemento. */
+    border-right: 2px solid black; /* Adiciona uma borda direita de 2px sólida e preta ao título. */
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite; /* Aplica as animações de digitação e piscar ao título. */
+}
+
+header nav {
+    float: right; /* Alinha o elemento de navegação à direita dentro do cabeçalho. */
+}
+
+header nav ul {
+    margin: 0; /* Remove a margem padrão da lista de navegação. */
+    padding: 0; /* Remove o preenchimento padrão da lista de navegação. */
+    list-style: none; /* Remove os marcadores padrão da lista de navegação. */
+}
+
+header nav ul li {
+    display: inline; /* Exibe os itens da lista de navegação em linha. */
+    margin-left: 10px; /* Adiciona uma margem esquerda de 10px entre os itens da lista. */
+}
+
+header nav ul li a {
+    color: #fff; /* Define a cor do texto dos links de navegação como branca. */
+    font-weight: bold; /* Define o peso da fonte dos links de navegação como negrito. */
+}
+
+.book-details {
+    width: 90%; /* Define a largura da seção de detalhes do livro como 90% da largura do elemento pai. */
+    max-width: 1000px; /* Define a largura máxima da seção de detalhes do livro como 1000px. */
+    margin: 20px auto; /* Adiciona uma margem superior e inferior de 20px e centraliza horizontalmente. */
+    padding: 20px; /* Adiciona um preenchimento interno de 20px. */
+    border-radius: 8px; /* Arredonda os cantos da borda com um raio de 8px. */
+    background-color: #f9f9f9; /* Define a cor de fundo da seção de detalhes do livro como um cinza muito claro. */
+    display: flex; /* Usa o layout flexível para a seção de detalhes do livro. */
+    align-items: center; /* Alinha verticalmente os itens ao centro. */
+}
+
+.book-details img {
+    max-width: 200px; /* Define a largura máxima da imagem como 200px. */
+    margin-right: 40px; /* Adiciona uma margem direita de 40px à imagem. */
+    border-radius: 15px; /* Arredonda os cantos da borda da imagem com um raio de 15px. */
+}
+
+.book-details h1 {
+    margin-top: 0; /* Remove a margem superior do título dentro da seção de detalhes do livro. */
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+}
+
+#container-book-details {
+    display: flex; /* Usa o layout flexível para o contêiner dos detalhes do livro. */
+    flex-direction: column; /* Alinha os itens no contêiner em uma coluna. */
+    align-items: center; /* Alinha horizontalmente os itens ao centro. */
+    padding-bottom: 20px; /* Adiciona um preenchimento interno inferior de 20px. */
+}
+
+.btn-voltar {
+    background-color: #4CAF50; /* Define a cor de fundo do botão como verde. */
+    border: none; /* Remove a borda padrão do botão. */
+    color: white; /* Define a cor do texto do botão como branca. */
+    padding: 15px 32px; /* Adiciona um preenchimento interno de 15px no topo e na base e 32px nas laterais. */
+    text-align: center; /* Alinha o texto dentro do botão ao centro. */
+    text-decoration: none; /* Remove o sublinhado do texto no botão. */
+    display: inline-block; /* Faz o botão se ajustar ao conteúdo e se comportar como um bloco inline. */
+    font-size: 16px; /* Define o tamanho da fonte do botão como 16px. */
+    transition: all 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para todas as propriedades do botão. */
+    cursor: pointer; /* Muda o cursor do mouse para uma mão quando passa sobre o botão. */
+    border-radius: 8px; /* Arredonda os cantos do botão com um raio de 8px. */
+}
+
+.btn-voltar:hover {
+    background-color: #45a049; /* Muda a cor de fundo do botão para um verde mais escuro quando o usuário passa o mouse sobre ele. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao botão para criar um efeito de profundidade. */
+}
+
+.btn-voltar:active {
+    transform: scale(0.95); /* Reduz o tamanho do botão em 5% quando ele é clicado, criando um efeito de pressionar. */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajusta a sombra do botão quando clicado para um efeito mais sutil. */
+}
+
+main {
+    padding: 20px 0; /* Adiciona um preenchimento interno de 20px no topo e na base do elemento main. */
+}
+
+.book-list {
+    display: grid; /* Usa o layout de grid para listar os livros. */
+    grid-template-columns: 1fr 1fr; /* Define duas colunas iguais para a lista de livros. */
+    gap: 15px; /* Adiciona um espaço de 15px entre os itens da grid. */
+}
+
+.book {
+    background: #f4f4f4; /* Define a cor de fundo dos itens da lista de livros como cinza claro. */
+    padding: 10px; /* Adiciona um preenchimento interno de 10px aos itens da lista de livros. */
+    border: 1px solid #343131; /* Adiciona uma borda de 1px sólida e escura aos itens da lista de livros. */
+    width: 100%; /* Define a largura dos itens da lista de livros para ocupar 100% do contêiner pai. */
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura dos itens. */
+    border-radius: 10px; /* Arredonda os cantos da borda dos itens da lista de livros com um raio de 10px. */
+}
+
+.flex {
+    display: flex; /* Usa o layout flexível para o contêiner com a classe flex. */
+    gap: 15px; /* Adiciona um espaço de 15px entre os itens flexíveis. */
+}
+
+.book img {
+    width: 120px; /* Define a largura da imagem dos livros como 120px. */
+    height: auto; /* Mantém a altura da imagem proporcional à largura. */
+    margin-right: 20px; /* Adiciona uma margem direita de 20px à imagem. */
+    border: 1px solid #ccc; /* Adiciona uma borda de 1px sólida e cinza claro à imagem. */
+    border-radius: 10px; /* Arredonda os cantos da borda da imagem com um raio de 10px. */
+}
+
+footer {
+    background: #333333; /* Define a cor de fundo do rodapé como cinza escuro. */
+    color: #fff; /* Define a cor do texto no rodapé como branca. */
+    text-align: center; /* Alinha o texto no rodapé ao centro. */
+    padding: 10px 0; /* Adiciona um preenchimento interno de 10px no topo e na base do rodapé. */
+    width: 100%; /* Define a largura do rodapé para ocupar 100% do contêiner pai. */
+}
+
+@media screen and (max-width: 900px) {
+    .book-list {
+        grid-template-columns: 1fr; /* Altera o layout da lista de livros para uma única coluna em telas menores que 900px. */
+    }
+
+    .book-details {
+        flex-direction: column; /* Alinha os itens dentro da seção de detalhes do livro em uma coluna em telas menores. */
+    }
+
+    .book-details img {
+        margin-bottom: 25px; /* Adiciona uma margem inferior de 25px à imagem dentro da seção de detalhes do livro em telas menores. */
+    }
+    
+    .flex {
+        margin: 0px 20px; /* Adiciona uma margem horizontal de 20px ao contêiner flexível em telas menores. */
+    }
+}
