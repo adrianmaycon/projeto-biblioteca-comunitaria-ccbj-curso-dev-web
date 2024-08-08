@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Início do documento HTML com idioma definido como inglês. -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar uma ampla gama de caracteres internacionais. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para que o layout se ajuste à largura da tela do dispositivo e tenha um nível de zoom inicial de 1. -->
+    <title>Biblioteca Comunitária CCBJ</title> <!-- Define o título da página, que aparece na aba do navegador. -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Vincula um arquivo CSS externo para aplicar estilos à página. -->
+    <script src="js/script.js"></script> <!-- Vincula um arquivo JavaScript externo para adicionar interatividade à página. -->
+</head>
+
+<body>
+    <header id="cabecalho"> <!-- Cabeçalho da página, com um ID para possível estilização ou manipulação via JavaScript. -->
+        <div class="container"> <!-- Contêiner para centralizar e limitar a largura do conteúdo dentro do cabeçalho. -->
+            <h1>Biblioteca Comunitária CCBJ</h1> <!-- Título principal da página. -->
+            <nav> <!-- Elemento de navegação para links de navegação do site. -->
+                <ul> <!-- Lista não ordenada para os itens de navegação. -->
+                    <li><a href="index.html">Inicial</a></li> <!-- Link para a página inicial do site. -->
+                    <li><a href="about.html">Sobre</a></li> <!-- Link para a página "Sobre" do site. -->
+                    <li><a href="contact.html">Contato</a></li> <!-- Link para a página de contato do site. -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main> <!-- Área principal do conteúdo da página. -->
+        <div class="container"> <!-- Contêiner para centralizar e limitar a largura do conteúdo principal. -->
+            <div class="header-main"> <!-- Seção para o conteúdo específico da página principal. -->
+                <h2>Bem-vindo á Biblioteca Comunitária</h2> <!-- Subtítulo principal da página. -->
+                <p>Explore uma ampla variedade de livros disponíveis para a comunidade.
+                    Visite-nos e encontre a sua próxima leitura favorita!</p> <!-- Parágrafo de boas-vindas e convite para explorar a biblioteca. -->
+                
+                <!-- Campo de Pesquisa -->
+                <div class="search-container"> <!-- Contêiner para o campo de pesquisa. -->
+                    <input type="text" id="searchInput" placeholder="Pesquisar livros pelo título..."> <!-- Campo de entrada para pesquisa de livros, com um texto de exemplo no campo. -->
+                </div>
+            </div>
+
+            <div class="book-list"></div> <!-- Divisão onde a lista de livros será exibida, provavelmente preenchida dinamicamente com JavaScript. -->
+        </div>
+    </main>
+
+    <footer> <!-- Rodapé da página. -->
+        <div class="container"> <!-- Contêiner para centralizar e limitar a largura do conteúdo no rodapé. -->
+            <p>&copy; 2024 Biblioteca Comunitária. Todos os direitos reservados.</p> <!-- Texto de direitos autorais, com o símbolo de copyright e o ano atual. -->
+        </div>
+    </footer>
+</body>
+
+</html>
